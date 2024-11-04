@@ -1,5 +1,5 @@
 
-# Trending Code Repository
+# 100 Day & 100 Projects
 
 This repository features a collection of trending code snippets, libraries, and frameworks that are currently popular in the development community.
 
