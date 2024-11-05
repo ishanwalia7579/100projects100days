@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9ebee;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.login-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    color: #333;
+    width: 350px;
+}
+
+.signup-box {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.signup-box h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h1>facebook</h1>
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="Email or Phone" class="input-field">
+            <input type="password" placeholder="Password" class="input-field">
+            <button type="submit" class="login-btn">Log In</button>
+            <a href="#" class="forgot-password">Forgotten account?</a>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="welcome-text">
+            <h2>Connect with friends and the world around you on Facebook.</h2>
+        </div>
+        <div class="signup-box">
+            <h2>Create an Account</h2>
+            <p>It's quick and easy.</p>
+            <form>
+                <input type="text" placeholder="First name" class="signup-input">
+                <input type="text" placeholder="Last name" class="signup-input">
+                <input type="text" placeholder="Mobile number or email" class="signup-input">
+                <input type="password" placeholder="New password" class="signup-input">
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
