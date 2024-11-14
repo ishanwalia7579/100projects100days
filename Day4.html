@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        /* Modern color palette and root variables */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #2c3e50;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Basic styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header and Footer styles */
+        header, footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            box-shadow: var(--shadow);
+        }
+
+        /* Header-specific style */
+        header {
+            top: 0;
+            display: flex;
+            justify-content:end;
+            padding: 20px;
+        
+        }
+
+        /* Navigation styles */
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Link styles in header */
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main content style */
+        main {
+            padding: 100px 40px 80px;
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Form and table container styles */
+        .form-container, .table-container {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Footer-specific style */
+        footer {
+            bottom: 0;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                padding: 80px 20px 60px;
+            }
+            
+            header {
+                padding: 15px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+    <script>
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the form from submitting the traditional way
+            alert("Form submitted successfully!");
+            window.location.href = "about.html"; // Redirects to the About Us page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Left Division - Registration Form -->
+        <div class="form-container">
+            <h2>Registration Form</h2>
+            <form onsubmit="submitForm(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Right Division - Table -->
+        <div class="table-container">
+            <h2>User Information</h2>
+            <table>
+                <tr>
+                    <th>User ID</th>
+                    <th>Roll No</th>
+                    <th colspan="2">Course</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">101</td>
+                    <td>001</td>
+                    <td colspan="2">Computer Science</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td colspan="2">Mathematics</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>003</td>
+                    <td colspan="2">Physics</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 My Webpage
+    </footer>
+
+</body>
+</html>
