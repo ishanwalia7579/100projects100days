@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The createElement() Method</h2>
+    <p>Create a p elemnet and append it to "myDiv":</p>
+    <div id="myDiv" style="padding: 16px;background-color: lightgray;">
+        <h3>A DIV element</h3>
+    </div>
+    <div id="myDIV2" style="padding: 16px; background-color: aqua;">
+        <h3>Ishan walia</h3>
+    </div>
+    <script>
+        //Create elemnet;
+        const para=document.createElement("p");
+        para.innerHTML ="This is a paragraph";
+
+        //Append to another element:
+        document.getElementById("myDIV").appendChild(para);
+
+        //Append to another element:
+        document.getElementById("myDIV2").appendChild(para);
+    </script>
+</body>
+</html>
