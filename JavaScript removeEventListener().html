@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript removeEventListener()</h2>
+    <div id="myDIV">
+        <p style="background-color: red; padding: 16px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In aut voluptas perspiciatis necessitatibus dolore placeat repellendus libero recusandae quisquam doloremque architecto ea numquam sint eligendi amet, dolor, iusto deleniti sed!</p>
+    <button onclick="removeHandler()"id="myBtn">Remove</button>
+    </div>
+    <p id="demo"></p>
+    <script>
+ document.getElementById("myDIV").addEventListener
+("mousemove",myFunction);
+function myFunction()
+{
+    document.getElementById("demo").innerHTML= Math.random();
+    }
+
+        
+function removeHandler(){
+    document.getElementById("myDIV").removeEventListener("mousemove",myFunction);
+}
+    </script>
+</body>
+</html>
